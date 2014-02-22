@@ -45,7 +45,16 @@ config = {
     // Configure your URL and mail settings here
     production: {
         url: 'http://blog.ranman.org',
-        mail: {},
+        mail: {
+            transport: 'SMTP',
+            options: {
+                service: 'Gmail',
+                auth: {
+                    user: 'username'
+                    pass: 'password'
+                }
+            }
+        },
         database: {
             client: 'sqlite3',
             connection: {
